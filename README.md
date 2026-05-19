@@ -11,39 +11,43 @@
 
 ### Ось структурна схема програми
 
-<img width="418" height="525" alt="image" src="https://github.com/user-attachments/assets/9d91b71a-43e6-4f30-a08a-8f12483f5936" />
+<img width="500" height="630" alt="зображення" src="https://github.com/user-attachments/assets/30129037-8f5e-4702-bddc-37c0706b54e0" />
 
 ### Ось структура бази даних
 
-<img width="470" height="470" alt="image" src="https://github.com/user-attachments/assets/0c2986f9-9fd8-4eb4-ab7a-06c69b3d495e" />
+<img width="600" height="600" alt="зображення" src="https://github.com/user-attachments/assets/1f1a4cd1-ce86-4d41-87d2-604c2c4b398e" />
 
 ## Результат роботи та вигляд програми
 
 ### Інтерфейс головної сторінки програми
 
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/f3bd5c95-2482-4f20-9657-bd9656d3a83c" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/34662b30-cb98-4732-8a69-9f960ab9587a" />
 
 ### Інформація про книгу
 
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/121f396c-c57c-4fb0-b5ca-8a331f65058a" />
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/8f6011b4-5489-4cd3-986c-b9d2983e64c3" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/072011ea-ea2e-459f-a96c-4d515c63eaeb" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/86ca7483-a6a3-407b-9ecc-5c3a0b62a4c5" />
 
 ### Інтерфейс читання книги
 Він виконаний за допомогою бібліотеки Readium, можна змінювати розмір шрифту тему сторінки і тд.
 
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/d0444367-ed2f-4aaf-b430-3f1b6851ba0b" />
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/4b7b43d4-5303-4377-b55c-32d82c1e142e" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/40976bdf-4256-4428-b8db-6eeec0a33e9e" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/6dca36c0-67a4-41fb-8c81-435d7fe08a40" />
 
 ### Фільтрація книг
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/1c0e3788-b4ca-4e5f-a1de-9207f414361d" />
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/bfdbac30-6326-4c36-91cd-faaa22c90de4" />
+
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/f66e37b5-c193-48e1-8788-d1057b1f4784" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/d0ac34b8-aa90-49e1-a76c-f5eb4662aec9" />
+
 
 Результат фільтрації
 
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/09a5c295-bd12-4550-9143-4ee34492c08c" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/eafa385c-cfde-4a29-be92-ba02152e8f10" />
+
 
 ### Сторінка моєї бібліотеки та полиць
 
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/dfca2a16-eaf0-4f71-be8c-3af31731244f" />
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/9bd88518-115e-4b9f-b834-1b60957561b3" />
-<img width="280" height="600" alt="image" src="https://github.com/user-attachments/assets/9f085556-12f3-4f2b-ad1c-fd42b8cb485e" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/10370707-7260-4955-b9f4-3dde139f51f4" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/aa1d3569-9317-414c-8d67-f15237cb4d5b" />
+<img width="280" height="600" alt="зображення" src="https://github.com/user-attachments/assets/39906665-44c8-4c60-b417-1b37edbd39f5" />
+
