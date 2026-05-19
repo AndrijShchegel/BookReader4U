@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="genre_keys">
+        <item>action</item>
+        <item>adventure</item>
+        <item>comedy</item>
+        <item>drama</item>
+        <item>fantasy</item>
+        <item>fiction</item>
+        <item>horror</item>
+        <item>historical</item>
+        <item>mystery</item>
+        <item>romance</item>
+        <item>sci-fi</item>
+        <item>thriller</item>
+        <item>tragedy</item>
+    </string-array>
+
+</resources>

@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <com.google.android.material.imageview.ShapeableImageView
+        android:id="@+id/iv_review_profile_round"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:layout_marginTop="12dp"
+        android:contentDescription="@string/image_description_profile_image"
+        android:scaleType="centerCrop"
+        android:src="@drawable/default_profile_image_40"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:shapeAppearanceOverlay="@style/Circular" />
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:visibility="gone"
+        app:layout_constraintBottom_toBottomOf="@id/iv_review_profile_round"
+        app:layout_constraintEnd_toEndOf="@id/iv_review_profile_round"
+        app:layout_constraintStart_toStartOf="@id/iv_review_profile_round"
+        app:layout_constraintTop_toTopOf="@id/iv_review_profile_round" />
+
+    <TextView
+        android:id="@+id/tv_review_username"
+        style="@style/TextAppearance.Material3.BodyLarge"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="18dp"
+        android:maxLines="1"
+        android:textStyle="bold"
+        app:layout_constraintStart_toEndOf="@id/iv_review_profile_round"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:text="My name is Admin" />
+
+    <RatingBar
+        android:id="@+id/rb_review_indicator"
+        style="@style/Widget.AppCompat.RatingBar.Small"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="6dp"
+        android:isIndicator="true"
+        android:progressTint="@color/rating_bar_tint"
+        app:layout_constraintStart_toEndOf="@id/iv_review_profile_round"
+        app:layout_constraintTop_toBottomOf="@id/tv_review_username"
+        tools:rating="4" />
+
+    <TextView
+        android:id="@+id/tv_review_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="4dp"
+        app:layout_constraintStart_toEndOf="@id/rb_review_indicator"
+        app:layout_constraintTop_toBottomOf="@id/tv_review_username"
+        tools:text="May 11, 2025" />
+
+    <TextView
+        android:id="@+id/tv_review_text"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:ellipsize="end"
+        android:maxLines="4"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@id/rb_review_indicator"
+        app:layout_constraintTop_toBottomOf="@id/tv_review_date"
+        tools:text="Hello this is my review i need to check it's capacity\n\nHello\nHello" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

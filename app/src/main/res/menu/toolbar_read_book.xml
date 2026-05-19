@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/menu_display_settings"
+        android:icon="@drawable/write_format_size"
+        android:title="@string/menu_display_options"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_other_options"
+        android:icon="@drawable/white_more_vert"
+        android:iconTint="?attr/colorOnPrimary"
+        android:title="@string/menu_other_options"
+        app:showAsAction="always" />
+</menu>

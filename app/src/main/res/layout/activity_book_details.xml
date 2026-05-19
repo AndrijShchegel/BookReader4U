@@ -1,0 +1,509 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.bookDetails.BookDetailsActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="?attr/colorPrimary">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar_book_description"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="?attr/colorPrimary"
+            android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+            app:layout_scrollFlags="scroll|enterAlways"
+            app:navigationIcon="@drawable/ic_arrow_back_24"
+            app:navigationIconTint="?attr/colorOnPrimary"
+            app:title="@string/book_details_title"
+            tools:menu="@menu/toolbar_book_details" />
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <!-- Image cover -->
+            <ImageView
+                android:id="@+id/iv_book_description_cover"
+                android:layout_width="200dp"
+                android:layout_height="300dp"
+                android:layout_gravity="center"
+                android:layout_marginTop="24dp"
+                android:layout_marginBottom="24dp"
+                android:contentDescription="@string/image_description_book_cover"
+                android:scaleType="centerCrop"
+                tools:src="@drawable/book_cover" />
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp">
+
+                <!-- Book Title -->
+                <TextView
+                    android:id="@+id/tv_book_description_title"
+                    style="@style/TextAppearance.Material3.HeadlineSmall"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="24dp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:text="Call of the Sirens" />
+
+                <!-- Author -->
+                <TextView
+                    android:id="@+id/tv_book_description_author"
+                    style="@style/TextAppearance.Material3.BodyLarge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:textAlignment="center"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_description_title"
+                    tools:text="Author: K. B. Benson" />
+
+                <!-- Rating Section -->
+                <LinearLayout
+                    android:id="@+id/ll_rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_description_author">
+
+                    <RatingBar
+                        android:id="@+id/rb_book_description_rating"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="8dp"
+                        android:isIndicator="true"
+                        android:numStars="5"
+                        android:progressTint="@color/rating_bar_tint"
+                        android:stepSize="0.1"
+                        tools:rating="4.5" />
+
+                    <TextView
+                        android:id="@+id/tv_rating_count"
+                        style="@style/TextAppearance.Material3.BodySmall"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        tools:text="(64 ratings)" />
+                </LinearLayout>
+
+                <!-- Read Button -->
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_book_description_read"
+                    style="@style/Widget.Material3.Button"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/button_read"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@+id/ll_rating" />
+
+                <!-- Description -->
+                <TextView
+                    android:id="@+id/tv_book_description_description"
+                    style="@style/TextAppearance.Material3.BodyLarge"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    android:layout_marginTop="24dp"
+                    android:lineSpacingExtra="4sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_book_description_read"
+                    tools:text="Banished to the land by her siren clan, Iris is charged with luring human prey into the depths of the sea as penance. They are victims of the Harvest — a sacrificial feast hearkening back to the days of Odysseus.\n\nNo one escapes the siren’s song.\n\nBut as Iris’ love for the human world grows, she is torn between her loyalties above and below the waves. When the waters under the sea darken and the sirens delve into forbidden magic, Iris turns to ancient legends to protect her loved ones and save humankind.\n\nDive into a magical, mysterious side of our world you never knew existed. Journey with Iris and discover what it means to be human… including undying love and heartbreaking loss." />
+
+                <!-- Genres -->
+                <TextView
+                    android:id="@+id/tv_book_description_genres"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/genres_title"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_description_description" />
+
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/chip_group_book_description_genres"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginHorizontal="24dp"
+                    app:chipSpacingVertical="0dp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_description_genres" />
+
+                <!-- Rating Section -->
+                <TextView
+                    android:id="@+id/tv_book_description_rating"
+                    style="@style/TextAppearance.Material3.TitleMedium"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="24dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/leave_a_review_title"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/chip_group_book_description_genres" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/layout_book_description_user_review"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:paddingHorizontal="36dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_book_description_rating">
+
+                    <com.google.android.material.imageview.ShapeableImageView
+                        android:id="@+id/iv_book_description_profile_round"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
+                        android:layout_marginTop="12dp"
+                        android:contentDescription="@string/description_user_profile_image"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_profile_image_40"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:shapeAppearanceOverlay="@style/Circular" />
+
+                    <TextView
+                        android:id="@+id/tv_book_description_username"
+                        style="@style/TextAppearance.Material3.BodyLarge"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="12dp"
+                        android:maxLines="1"
+                        android:textStyle="bold"
+                        app:layout_constraintEnd_toStartOf="@id/ib_book_description_menu_delete_review"
+                        app:layout_constraintStart_toEndOf="@id/iv_book_description_profile_round"
+                        app:layout_constraintTop_toTopOf="parent"
+                        tools:text="My name is Admin" />
+
+                    <RatingBar
+                        android:id="@+id/rb_book_description_user_review_indicator"
+                        style="@style/Widget.AppCompat.RatingBar.Small"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="12dp"
+                        android:layout_marginTop="6dp"
+                        android:isIndicator="true"
+                        android:progressTint="@color/rating_bar_tint"
+                        app:layout_constraintStart_toEndOf="@id/iv_book_description_profile_round"
+                        app:layout_constraintTop_toBottomOf="@id/tv_book_description_username"
+                        tools:rating="4" />
+
+                    <TextView
+                        android:id="@+id/tv_book_description_user_review_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="4dp"
+                        android:layout_marginTop="4dp"
+                        app:layout_constraintStart_toEndOf="@id/rb_book_description_user_review_indicator"
+                        app:layout_constraintTop_toBottomOf="@id/tv_book_description_username"
+                        tools:text="May 11, 2025" />
+
+                    <ImageButton
+                        android:id="@+id/ib_book_description_menu_delete_review"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:background="?attr/selectableItemBackgroundBorderless"
+                        android:contentDescription="@string/icon_description_delete_user_review"
+                        android:src="@drawable/ic_more_vert_24"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tv_book_description_user_review_text"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="4dp"
+                        android:ellipsize="end"
+                        android:maxLines="4"
+                        app:layout_constraintEnd_toStartOf="@id/ib_book_description_menu_delete_review"
+                        app:layout_constraintStart_toStartOf="@id/rb_book_description_user_review_indicator"
+                        app:layout_constraintTop_toBottomOf="@id/tv_book_description_user_review_date"
+                        tools:text="Hello this is my review i need to check it's capacity\n\nHello\nHello" />
+
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+                <RatingBar
+                    android:id="@+id/rb_book_description_rating_interact"
+                    style="@style/Widget.AppCompat.RatingBar"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:progressTint="@color/rating_bar_tint"
+                    android:stepSize="1.0"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/layout_book_description_user_review"
+                    tools:rating="4" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button_book_description_review"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="12dp"
+                    android:text="@string/button_create_review"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/rb_book_description_rating_interact" />
+
+                <LinearLayout
+                    android:id="@+id/ll_book_description_rating_details"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/button_book_description_review">
+
+                    <TextView
+                        android:id="@+id/tv_book_description_rating_details"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="24dp"
+                        android:layout_marginStart="24dp"
+                        android:text="@string/rating_details_title"
+                        android:textSize="24sp"
+                        android:textStyle="bold" />
+
+                    <TextView
+                        android:id="@+id/tv_book_description_average_rating"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="8dp"
+                        android:textSize="16sp"
+                        tools:text="4.5 out of 5    10,150 ratings" />
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_description_5_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:orientation="horizontal"
+                        android:weightSum="1">
+
+                        <RatingBar
+                            android:id="@+id/rb_book_description_5_star_rating"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/rating_bar_tint"
+                            android:rating="5"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_book_description_5_star_progress"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_weight="0.6"
+                            android:progressDrawable="@drawable/progress_bar_bg_for_display_ratings"
+                            android:progressTint="@color/rating_bar_tint"
+                            tools:progress="64" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_description_4_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:weightSum="1">
+
+                        <RatingBar
+                            android:id="@+id/rb_book_description_4_star_rating"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/rating_bar_tint"
+                            android:rating="4"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_book_description_4_star_progress"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_weight="0.6"
+                            android:progressDrawable="@drawable/progress_bar_bg_for_display_ratings"
+                            android:progressTint="@color/rating_bar_tint"
+                            tools:progress="24" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_description_3_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:weightSum="1">
+
+                        <RatingBar
+                            android:id="@+id/rb_book_description_3_star_rating"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/rating_bar_tint"
+                            android:rating="3"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_book_description_3_star_progress"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_weight="0.6"
+                            android:progressDrawable="@drawable/progress_bar_bg_for_display_ratings"
+                            tools:progress="12" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_description_2_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:weightSum="1">
+
+                        <RatingBar
+                            android:id="@+id/rb_book_description_2_star_rating"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/rating_bar_tint"
+                            android:rating="2"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_book_description_2_star_progress"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_weight="0.6"
+                            android:progressDrawable="@drawable/progress_bar_bg_for_display_ratings"
+                            tools:progress="4" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:id="@+id/ll_book_description_1_star"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="8dp"
+                        android:gravity="center"
+                        android:weightSum="1">
+
+                        <RatingBar
+                            android:id="@+id/rb_book_description_1_star_rating"
+                            style="@style/Widget.AppCompat.RatingBar.Small"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:progressTint="@color/rating_bar_tint"
+                            android:rating="1"
+                            android:scaleX="1.5"
+                            android:scaleY="1.5" />
+
+                        <ProgressBar
+                            android:id="@+id/pb_book_description_1_star_progress"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="0dp"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="36dp"
+                            android:layout_weight="0.6"
+                            android:progressDrawable="@drawable/progress_bar_bg_for_display_ratings"
+                            tools:progress="4" />
+
+                    </LinearLayout>
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:id="@+id/ll_book_description_review_container"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:paddingHorizontal="36dp"
+                    android:paddingTop="12dp"
+                    android:visibility="gone"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_book_description_rating_details">
+
+                    <include layout="@layout/item_review" />
+
+                    <include layout="@layout/item_review" />
+
+                    <include layout="@layout/item_review" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_book_description_more_reviews"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="48dp"
+                    android:layout_marginTop="16dp"
+                    android:text="@string/tv_for_more_reviews"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:visibility="gone"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/ll_book_description_review_container" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

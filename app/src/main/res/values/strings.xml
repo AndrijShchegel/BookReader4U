@@ -1,0 +1,109 @@
+<resources>
+    <string name="app_name">Book Reader 4 U</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_explore">Explore</string>
+    <string name="menu_library">My Library</string>
+    <string name="menu_settings">Settings</string>
+    <string name="rating_single">%1$.1f out of 5    %2$d rating</string>
+    <string name="rating_two_to_four">%1$.1f out of 5    %2$d ratings</string>
+    <string name="rating_multiple">%1$.1f out of 5    %2$d ratings</string>
+    <string name="saved_zero">%1$d books</string>
+    <string name="saved_single">%1$d book</string>
+    <string name="saved_two_to_four">%1$d books</string>
+    <string name="saved_multiple">%1$d books</string>
+    <string name="menu_search">Search</string>
+
+    <string-array name="order_by">
+        <item>Addition Date</item>
+        <item>Title</item>
+        <item>Rating</item>
+        <item>Review Count</item>
+    </string-array>
+    <string name="filter_order_by">Order by</string>
+
+
+    <string name="genre_action">Action</string>
+    <string name="genre_adventure">Adventure</string>
+    <string name="genre_comedy">Comedy</string>
+    <string name="genre_drama">Drama</string>
+    <string name="genre_fantasy">Fantasy</string>
+    <string name="genre_fiction">Fiction</string>
+    <string name="genre_horror">Horror</string>
+    <string name="genre_historical">Historical</string>
+    <string name="genre_mystery">Mystery</string>
+    <string name="genre_romance">Romance</string>
+    <string name="genre_sci_fi">Science Fiction</string>
+    <string name="genre_thriller">Thriller</string>
+    <string name="genre_tragedy">Tragedy</string>
+
+    <string name="genre_unknown">Unknown genre</string>
+    <string name="button_read">Read</string>
+    <string name="button_create_review">Create Review</string>
+    <string name="icon_description_delete_user_review">Menu for deleting review</string>
+    <string name="image_description_book_cover">Book Cover</string>
+    <string name="description_user_profile_image">Your profile image</string>
+    <string name="genres_title">Genres:</string>
+    <string name="tv_for_more_reviews">More reviews</string>
+    <string name="leave_a_review_title">Rate this book</string>
+    <string name="rating_details_title">Rating Details</string>
+    <string name="filter_minimum_rating_any">Minimum rating: Any</string>
+    <string name="filter_minimum_rating_number">Minimum rating: %1$.1f</string>
+    <string name="logic_or">OR</string>
+    <string name="logic_and">AND</string>
+    <string name="library_collections">Collections</string>
+    <string name="library_favorites">Favorites</string>
+    <string name="library_saved">Saved</string>
+    <string name="library_downloads">Downloads</string>
+    <string name="library_finished">Finished</string>
+    <string name="library_title">My Library</string>
+    <string name="library_continue_reading">Continue Reading</string>
+    <string name="home_new_books">New Books</string>
+    <string name="home_expand">See All</string>
+    <string name="login_welcome_title">Welcome!</string>
+    <string name="login_description">Login to start your journey</string>
+    <string name="hint_email">Enter your email address</string>
+    <string name="hint_password">Enter your password</string>
+    <string name="login_button">Login</string>
+    <string name="redirect_to_register">Gon\'t have an account, Register!</string>
+    <string name="image_description_profile_image">User profile image</string>
+    <string name="logout_button">Logout</string>
+    <string name="filter_settings_description">Filter settings</string>
+    <string name="search_filter_text">Filter</string>
+    <string name="search_not_found">Sorry, but we can\'t find anything for your request</string>
+    <string name="button_confirm_review_changes">Send</string>
+    <string name="hint_share_your_thoughts">Share your thoughts (optional)</string>
+    <string name="text_afterspeach_review">Reviews are available to all users.</string>
+    <string name="filter_sort_order">Sort order</string>
+    <string name="filter_sort_descending">Descending</string>
+    <string name="filter_sort_ascending">Ascending</string>
+    <string name="filter_genre_title">Filter by genre</string>
+    <string name="reset_filter_options_button">Reset</string>
+    <string name="apply_filter_options_button">Apply Filters</string>
+    <string name="register_title">Create Account</string>
+    <string name="register_description">Create your account to access our app</string>
+    <string name="hint_register_username">Choose a username</string>
+    <string name="hint_register_email">Enter your email address</string>
+    <string name="hint_register_password">Create your password</string>
+    <string name="hint_register_confirm_password">Repeat your password</string>
+    <string name="register_confirm_button">Register</string>
+    <string name="redirect_to_login_test">Already Registered, Login!</string>
+    <string name="error_wrong_email_pattern">This is wrong email pattern</string>
+    <string name="error_password_length">Password must be at least 6 characters</string>
+    <string name="error_wrong_email_or_password">Wrong email or password</string>
+    <string name="error_username_length">Username must be at least 3 characters</string>
+    <string name="error_match_passwords">Passwords don\'t match</string>
+    <string name="error_empty_field">This field is required</string>
+    <string name="error_check_fields">Check all fields, something wrong</string>
+    <string name="hint_search">Search by title or author</string>
+    <string name="rate_this_book">Rate this book</string>
+    <string name="your_review">Your Review</string>
+    <string name="button_edit_review">Edit Review</string>
+    <string name="menu_other_options">Other options</string>
+    <string name="menu_display_options">Display options</string>
+    <string name="book_details_title">Book details</string>
+    <string name="book_description_saved_add">Add to saved</string>
+    <string name="filter_settings_title">Filter settings</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+</resources>

@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.admin.CreateBookActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="32dp"
+            android:text="Create Book!"
+            android:textSize="36sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginTop="16dp"
+            android:text="Fill all fields to create book"
+            android:textSize="24sp" />
+
+        <!-- Image input -->
+        <ImageView
+            android:id="@+id/iv_create_book_image"
+            android:layout_width="120dp"
+            android:layout_height="160dp"
+            android:contentDescription="Add book cover in here"
+            android:scaleType="centerCrop"
+            android:src="@drawable/insert_image"
+            android:layout_gravity="center"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Select book cover, tap on image above"
+            android:textSize="18sp"
+            android:layout_gravity="center"/>
+
+        <!-- Title input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="36dp"
+            android:hint="Enter book title">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_create_book_title"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textCapSentences"
+                tools:text="Call of the Sirens" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Author input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter author name">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_create_book_author"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textPersonName"
+                tools:text="K. B. Benson" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Description input -->
+        <com.google.android.material.textfield.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:hint="Enter book description">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edit_text_create_book_description"
+                style="@style/ThemeOverlay.Material3.TextInputEditText.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:inputType="textMultiLine"
+                android:minLines="3"
+                tools:text="Banished to the land by her siren clan, Iris is charged with luring human prey into the depths of the sea as penance. They are victims of the Harvest — a sacrificial feast hearkening back to the days of Odysseus. \n\nNo one escapes the siren’s song." />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <!-- Category input -->
+        <TextView
+            android:id="@+id/tw_create_book_category"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@drawable/edittext_background"
+            android:hint="Select categories for the book"
+            android:maxLines="1"
+            android:textSize="18sp"
+            app:drawableEndCompat="@drawable/arrow_drop_down" />
+
+
+        <Button
+            android:id="@+id/button_create_book"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Create Book" />
+
+    </LinearLayout>
+
+</ScrollView>

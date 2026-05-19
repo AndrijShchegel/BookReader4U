@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/button_book_details_saved"
+        android:icon="@drawable/icon_bookmark_border"
+        android:title="@string/book_description_saved_add"
+        app:showAsAction="ifRoom" />
+    <item
+        android:id="@+id/menu_other_options"
+        android:icon="@drawable/icon_more_vert"
+        android:title="@string/menu_other_options"
+        app:showAsAction="always" />
+</menu>
